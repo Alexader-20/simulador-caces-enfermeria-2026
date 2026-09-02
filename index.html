@@ -91,7 +91,7 @@ function render(){
   $("counter").textContent=(pos+1)+" / "+session.length;
   $("score").textContent="Aciertos: "+hits;
   $("bar").style.width=((pos/session.length)*100)+"%";
-  $("question").textContent=q.question;
+  document.querySelector(".matching-table")?.remove(); $("question").innerHTML=q.question; if(q.id===53){   $("question").insertAdjacentHTML("afterend",`     <table class="matching-table">       <thead>         <tr>           <th>TIPOS DE CATÉTER</th>           <th>CARACTERÍSTICAS</th>         </tr>       </thead>       <tbody>         <tr>           <td>1. Catéter Venoso Periférico</td>           <td>a) Radiopaco</td>         </tr>         <tr>           <td>2. Catéter Venoso Subcutáneo</td>           <td>b) Inserción en vena superficial</td>         </tr>         <tr>           <td>3. Catéter Venoso Central</td>           <td>c) Inserción en vena subclavia</td>         </tr>         <tr>           <td></td>           <td>d) Inserción en vena cava superior</td>         </tr>         <tr>           <td></td>           <td>e) Cánula corta</td>         </tr>         <tr>           <td></td>           <td>f) Con reservorio</td>         </tr>       </tbody>     </table>   `); }
   $("options").innerHTML="";
   $("feedback").className="feedback";
   $("nextBtn").disabled=true;
