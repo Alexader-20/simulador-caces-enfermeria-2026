@@ -91,7 +91,70 @@ function render(){
   $("counter").textContent=(pos+1)+" / "+session.length;
   $("score").textContent="Aciertos: "+hits;
   $("bar").style.width=((pos/session.length)*100)+"%";
-  document.querySelector(".matching-table")?.remove(); $("question").innerHTML=q.question; if(q.id===53){   $("question").insertAdjacentHTML("afterend",`     <table class="matching-table">       <thead>         <tr>           <th>TIPOS DE CATÉTER</th>           <th>CARACTERÍSTICAS</th>         </tr>       </thead>       <tbody>         <tr>           <td>1. Catéter Venoso Periférico</td>           <td>a) Radiopaco</td>         </tr>         <tr>           <td>2. Catéter Venoso Subcutáneo</td>           <td>b) Inserción en vena superficial</td>         </tr>         <tr>           <td>3. Catéter Venoso Central</td>           <td>c) Inserción en vena subclavia</td>         </tr>         <tr>           <td></td>           <td>d) Inserción en vena cava superior</td>         </tr>         <tr>           <td></td>           <td>e) Cánula corta</td>         </tr>         <tr>           <td></td>           <td>f) Con reservorio</td>         </tr>       </tbody>     </table>   `); }
+  document.querySelector(".matching-table")?.remove(); $("question").innerHTML=q.question .replace(/C\s*U\s*I\s*D\s*A\s*D\s*O\s*F\s*A\s*M\s*I\s*L\s*I\s*A\s*R\s*,\s*C\s*O\s*M\s*U\s*N\s*I\s*T\s*A\s*R\s*I\s*O\s*E\s*I\s*N\s*T\s*E\s*R\s*C\s*U\s*L\s*T\s*U\s*R\s*A\s*L/gi,"") .replace(/C\s*U\s*I\s*D\s*A\s*D\s*O\s*S?\s*D\s*E\s*L\s*A\s*M\s*U\s*J\s*E\s*R\s*,\s*R\s*E\s*C\s*I\s*É\s*N\s*N\s*A\s*C\s*I\s*D\s*O\s*,\s*N\s*I\s*N\s*O\s*Y\s*A\s*D\s*O\s*L\s*E\s*S\s*C\s*E\s*N\s*T\s*E/gi,"") .replace(/C\s*U\s*I\s*D\s*A\s*D\s*O\s*S?\s*D\s*E\s*L\s*A\s*D\s*U\s*L\s*T\s*O\s*Y\s*A\s*D\s*U\s*L\s*T\s*O\s*M\s*A\s*Y\s*O\s*R/gi,"") .replace(/B\s*A\s*S\s*E\s*S\s*E\s*D\s*U\s*C\s*A\s*T\s*I\s*V\s*A\s*S?\s*,\s*A\s*D\s*M\s*I\s*N\s*I\s*S\s*T\s*R\s*A\s*T\s*I\s*V\s*A\s*S?\s*,\s*I\s*N\s*V\s*E\s*S\s*T\s*I\s*G\s*A\s*T\s*I\s*V\s*A\s*S?\s*Y\s*E\s*P\s*I\s*D\s*E\s*M\s*I\s*O\s*L\s*Ó\s*G\s*I\s*C\s*A\s*S?\s*D\s*E\s*L\s*C\s*U\s*I\s*D\s*A\s*D\s*O\s*E\s*N\s*F\s*E\s*R\s*M\s*E\s*R\s*O/gi,""); if(q.id===53){   $("question").insertAdjacentHTML("afterend",`     <table class="matching-table">       <thead>         <tr>           <th>TIPOS DE CATÉTER</th>           <th>CARACTERÍSTICAS</th>         </tr>       </thead>       <tbody>         <tr>           <td>1. Catéter Venoso Periférico</td>           <td>a) Radiopaco</td>         </tr>         <tr>           <td>2. Catéter Venoso Subcutáneo</td>           <td>b) Inserción en vena superficial</td>         </tr>         <tr>           <td>3. Catéter Venoso Central</td>           <td>c) Inserción en vena subclavia</td>         </tr>         <tr>           <td></td>           <td>d) Inserción en vena cava superior</td>         </tr>         <tr>           <td></td>           <td>e) Cánula corta</td>         </tr>         <tr>           <td></td>           <td>f) Con reservorio</td>         </tr>       </tbody>     </table>   `); }
+  if(q.id===4){
+  $("question").insertAdjacentHTML("afterend",`
+    <table class="matching-table">
+      <thead>
+        <tr>
+          <th>GRUPO</th>
+          <th>PUEDE DONAR A</th>
+          <th>PUEDE RECIBIR DE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>A+</td><td>A+, AB+</td><td>A+, A-, O+, O-</td></tr>
+        <tr><td>O+</td><td>A+, O+, B+, AB+</td><td>O+, O-</td></tr>
+        <tr><td>B+</td><td>B+, AB+</td><td>B+, B-, O+, O-</td></tr>
+        <tr><td>AB+</td><td>AB+</td><td>TODOS</td></tr>
+        <tr><td>A-</td><td>A+, A-, AB+, AB-</td><td>A-, O-</td></tr>
+        <tr><td>O-</td><td>TODOS</td><td>O-</td></tr>
+        <tr><td>B-</td><td>B+, B-, AB+, AB-</td><td>B-, O-</td></tr>
+        <tr><td>AB-</td><td>AB+, AB-</td><td>A-, O-, B-, AB-</td></tr>
+      </tbody>
+    </table>
+  `);
+}
+  if(q.id===31){
+  $("question").insertAdjacentHTML("afterend",`
+    <table class="matching-table">
+      <thead>
+        <tr>
+          <th>ZONA DE KRAMER</th>
+          <th>EXTENSIÓN ANATÓMICA</th>
+          <th>BILIRRUBINA ESTIMADA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Zona 1</td>
+          <td>Cabeza y cuello</td>
+          <td>4 a 6 mg/dl</td>
+        </tr>
+        <tr>
+          <td>Zona 2</td>
+          <td>Tronco hasta el ombligo</td>
+          <td>6 a 8 mg/dl</td>
+        </tr>
+        <tr>
+          <td>Zona 3</td>
+          <td>Ombligo hasta rodillas</td>
+          <td>8 a 12 mg/dl</td>
+        </tr>
+        <tr>
+          <td>Zona 4</td>
+          <td>Brazos y piernas</td>
+          <td>12 a 14 mg/dl</td>
+        </tr>
+        <tr>
+          <td>Zona 5</td>
+          <td>Palmas de manos y plantas de pies</td>
+          <td>&gt;15 mg/dl</td>
+        </tr>
+      </tbody>
+    </table>
+  `);
+}
   $("options").innerHTML="";
   $("feedback").className="feedback";
   $("nextBtn").disabled=true;
