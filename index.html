@@ -92,6 +92,21 @@ function render(){
   $("score").textContent="Aciertos: "+hits;
   $("bar").style.width=((pos/session.length)*100)+"%";
   document.querySelector(".matching-table")?.remove(); $("question").innerHTML=q.question .replace(/C\s*U\s*I\s*D\s*A\s*D\s*O\s*F\s*A\s*M\s*I\s*L\s*I\s*A\s*R\s*,\s*C\s*O\s*M\s*U\s*N\s*I\s*T\s*A\s*R\s*I\s*O\s*E\s*I\s*N\s*T\s*E\s*R\s*C\s*U\s*L\s*T\s*U\s*R\s*A\s*L/gi,"") .replace(/C\s*U\s*I\s*D\s*A\s*D\s*O\s*S?\s*D\s*E\s*L\s*A\s*M\s*U\s*J\s*E\s*R\s*,\s*R\s*E\s*C\s*I\s*É\s*N\s*N\s*A\s*C\s*I\s*D\s*O\s*,\s*N\s*I\s*N\s*O\s*Y\s*A\s*D\s*O\s*L\s*E\s*S\s*C\s*E\s*N\s*T\s*E/gi,"") .replace(/C\s*U\s*I\s*D\s*A\s*D\s*O\s*S?\s*D\s*E\s*L\s*A\s*D\s*U\s*L\s*T\s*O\s*Y\s*A\s*D\s*U\s*L\s*T\s*O\s*M\s*A\s*Y\s*O\s*R/gi,"") .replace(/B\s*A\s*S\s*E\s*S\s*E\s*D\s*U\s*C\s*A\s*T\s*I\s*V\s*A\s*S?\s*,\s*A\s*D\s*M\s*I\s*N\s*I\s*S\s*T\s*R\s*A\s*T\s*I\s*V\s*A\s*S?\s*,\s*I\s*N\s*V\s*E\s*S\s*T\s*I\s*G\s*A\s*T\s*I\s*V\s*A\s*S?\s*Y\s*E\s*P\s*I\s*D\s*E\s*M\s*I\s*O\s*L\s*Ó\s*G\s*I\s*C\s*A\s*S?\s*D\s*E\s*L\s*C\s*U\s*I\s*D\s*A\s*D\s*O\s*E\s*N\s*F\s*E\s*R\s*M\s*E\s*R\s*O/gi,""); if(q.id===53){   $("question").insertAdjacentHTML("afterend",`     <table class="matching-table">       <thead>         <tr>           <th>TIPOS DE CATÉTER</th>           <th>CARACTERÍSTICAS</th>         </tr>       </thead>       <tbody>         <tr>           <td>1. Catéter Venoso Periférico</td>           <td>a) Radiopaco</td>         </tr>         <tr>           <td>2. Catéter Venoso Subcutáneo</td>           <td>b) Inserción en vena superficial</td>         </tr>         <tr>           <td>3. Catéter Venoso Central</td>           <td>c) Inserción en vena subclavia</td>         </tr>         <tr>           <td></td>           <td>d) Inserción en vena cava superior</td>         </tr>         <tr>           <td></td>           <td>e) Cánula corta</td>         </tr>         <tr>           <td></td>           <td>f) Con reservorio</td>         </tr>       </tbody>     </table>   `); }
+  if(q.id===23){
+  $("question").innerHTML=q.question.substring(q.question.indexOf("Al centro de salud"));
+}
+
+if(q.id===43){
+  $("question").innerHTML=q.question.substring(q.question.indexOf("Paciente masculino de 45 años"));
+}
+
+if(q.id===70){
+  $("question").innerHTML=q.question.substring(q.question.indexOf("El personal de un centro de salud tipo B"));
+}
+
+if(q.id===85){
+  $("question").innerHTML=q.question.substring(q.question.indexOf("En una investigación sobre factores asociados a hipertensión"));
+}
   if(q.id===4){
   $("question").insertAdjacentHTML("afterend",`
     <table class="matching-table">
