@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Simulador de preguntas CACES 2026 para Enfermería. Preguntas aleatorias con respuesta y justificación inmediata.">
-<title>Simulador CACES 2026 · Enfermería</title>
+<title>SIMULADOR CACES MAYO 2026</title>
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#667085;--primary:#1457a6;--primary2:#0b3b75;--border:#dbe2ea;--good:#137333;--bad:#b42318;--goodbg:#ecfdf3;--badbg:#fef3f2;--shadow:0 12px 35px rgba(16,24,40,.08)}
 *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#edf4fc 0,#f8fafc 260px);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
@@ -24,15 +24,11 @@ select{padding:10px;border:1px solid var(--border);border-radius:10px;background
 <body>
 <main class="wrap" id="app">
 <section class="hero">
-  <h1>Simulador CACES 2026</h1>
-  <p>Enfermería · práctica con preguntas aleatorias y explicación inmediata</p>
-  <span class="tag">Banco de 99 preguntas completas de la guía adjunta</span>
+  <h1>SIMULADOR CACES MAYO 2026</h1>
 </section>
 
 <section class="panel start" id="start">
   <h2>¿Listo para comenzar?</h2>
-  <p>Las preguntas y las alternativas se mezclan en cada intento. Después de responder verás la respuesta correcta y la justificación incluida en la guía.</p>
-  <p class="big"><span id="total">99</span> preguntas disponibles</p>
   <div class="row" style="justify-content:center;margin:18px 0">
     <label for="amount">Cantidad por intento:</label>
     <select id="amount">
@@ -43,7 +39,6 @@ select{padding:10px;border:1px solid var(--border);border-radius:10px;background
     </select>
   </div>
   <button class="action" id="startBtn">Comenzar simulador</button>
-  <p class="small" style="margin-top:16px">Fuente de contenido: “Preguntas CACES 2026 – Enfermería”, PDF proporcionado en esta conversación. La pregunta 100 del PDF aparece incompleta y por eso no se incorporó.</p>
 </section>
 
 <section class="panel" id="quiz" hidden>
